@@ -550,9 +550,11 @@ function getIntervalArray(start, end) {
  */
 function distinct(arr) {
    let newarr = [];
+   let temp;
    return arr.filter(function(curr, index){
       newarr.push(curr);
-      if (newarr.slice(0, index).includes(curr) === false){
+      temp = newarr.slice(0, index)
+      if (temp.includes(curr) === false){
         return curr;
       }
    });
